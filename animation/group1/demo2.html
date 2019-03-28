@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 立方体实现方法1 */
+    #box{
+      width: 200px;
+      height: 200px;
+      padding: 50px;
+      margin: 200px auto;
+      border: 1px solid #000;
+      perspective: 800px;
+    }
+    #div{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transition: 2s;
+      transform-style: preserve-3d;
+      transform-origin: center center 100px;
+    }
+    #box:hover #div{
+      transform: rotateY(360deg);
+    }
+    #div div{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      font: 100px/200px "Microsoft Yahei";
+      text-align: center;
+      color: #fff;
+      opacity: 0.5;
+    }
+    #div div:nth-of-type(1) {
+      background: #090;
+      left:0;
+      top: -200px;
+      transform-origin: bottom;
+      transform: rotateX(-90deg);
+    }
+    #div div:nth-of-type(2) {
+      background: #f0e;
+      left:-200px;
+      top: 0;
+      transform-origin: right;
+      transform: rotateY(90deg);
+    }
+    #div div:nth-of-type(3) {
+      background: #34f;
+      left:0;
+      top: 0;
+      /* transform-origin: bottom;
+      transform: rotateX(90deg); */
+    }
+    #div div:nth-of-type(4) {
+      background: #00d;
+      left:200px;
+      top: 0;
+      transform-origin: left;
+      transform: rotateY(-90deg);
+    }
+    #div div:nth-of-type(5) {
+      background: #838;
+      left:0;
+      top: 200px;
+      transform-origin: top;
+      transform: rotateX(90deg);
+    }
+    #div div:nth-of-type(6) {
+      background: #08f;
+      left:0;
+      top: 0;
+      /* transform-origin: bottom; */
+      transform: translateZ(200px);
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <div id="div">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </div>
+</body>
+</html>

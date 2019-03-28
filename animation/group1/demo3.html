@@ -1,0 +1,75 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      /* 立方体实现方法2 */
+      #box{
+        width: 200px;
+        height: 200px;
+        padding: 50px;
+        margin: 200px auto;
+        border: 1px solid #000;
+        perspective: 800px;
+      }
+      #div{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: 5s;
+      }
+      #box:hover #div{
+        transform: rotateY(360deg);
+      }
+      #div div{
+        color: #fff;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font: 100px/200px "Microsoft Yahei";
+        text-align: center;
+        opacity: 0.3;
+      }
+      #div div:nth-of-type(1){
+        background: #0f0;
+        transform:  translateZ(100px);
+      }
+      #div div:nth-of-type(2){
+        background: #ef0;
+        transform:  rotateY(-90deg) translateZ(100px);
+      }
+      #div div:nth-of-type(3){
+        background: #a3f;
+        transform:  rotateY(180deg) translateZ(100px);
+      }
+      #div div:nth-of-type(4){
+        background: #883;
+        transform:  rotateY(90deg) translateZ(100px);
+      }
+      #div div:nth-of-type(5){
+        background: #050;
+        transform:  rotateX(90deg) translateZ(100px);
+      }
+      #div div:nth-of-type(6){
+        background: #e0e;
+        transform:  rotateX(-90deg) translateZ(100px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div id="div">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+    </div>
+  
+  </body></html>
